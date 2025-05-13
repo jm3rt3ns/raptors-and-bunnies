@@ -24,9 +24,9 @@ def draw_fox(fox_location, game_state):
     result[x][y] = "F"
   elif pos_state == "F":
     # expand to all adjacent ones
-    for xpos in range(min(0, x-1), min(x+2, len(result))):
+    for xpos in range(max(0, x-1), min(x+2, len(result))):
       row_to_edit = result[xpos]
-      for ypos in range(min(0, y-1), min(y+2, len(row_to_edit))):
+      for ypos in range(max(0, y-1), min(y+2, len(row_to_edit))):
         print(xpos, ypos)
         result[xpos][ypos] = "F"
 

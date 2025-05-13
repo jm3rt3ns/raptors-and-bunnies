@@ -43,3 +43,18 @@ def test_grow_foxes_2():
       ["F", "F", "F"],
       ["F", "F", "F"],
   ]
+
+def test_grow_foxes_3():
+  basic_state = [
+      [None, None, None],
+      [None, None, None],
+      [None, None, "F"],
+  ]
+
+  result = draw_fox((2, 2), basic_state)
+
+  assert result == [
+      [None, None, None],
+      [None, "F", "F"],
+      [None, "F", "F"],
+  ]
